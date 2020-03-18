@@ -1,0 +1,67 @@
+.TH _PRINTF 1 "17 March 2020" "version 1.0"
+.DT _printf 1
+.SH NAME
+_printf \- prints and format data
+.SH SYNOPSIS
+.PP 
+#include "holberton.h"
+.PP 
+int _printf(const char *format, ...);
+.Op FORMAT
+.Op Fl ARGUMENT
+...
+.SH DESCRIPTION
+Printf is a function which allows to print in different formats such as string, char, integer and other basic format. Also it handles conversion as ROT13 and other format as hexa, octa and binary. 
+.PP
+FORMAT controls the output. Interpreted sequences are:
+.PP
+%c - prints a character
+.PP
+%s - prints a string
+.PP
+%% - prints a single %
+.PP
+%i - prints an integer
+.PP
+%d - prints an integer
+.PP
+%u - prints an unsigned data
+.PP
+%o - prints an unsigned octal
+.PP
+%x - prints an unsigned hexadecimal in lower case
+.PP
+%X - prints an unsigned hexadecimal in upper case
+.PP
+%r - prints a reverse string
+.PP
+%R - Convert to ROT13 format
+.El
+.Pp
+.SH RETURN VALUE
+.PP
+If everything is successful, the function returns the num of chars printed. In other case return -1.
+.SH EXAMPLES
+.PP
+ _printf("Character:[%c]\n", 'H');
+.PP
+_printf("Num 1: %d", 1);
+.PP
+_printf("Num 2: %i", 2);
+.PP
+_printf("Num 3: %u", 3);
+.PP
+_printf("Hexa 100: %x", 100);
+.PP
+_printf("Holberton School : %R", "Holberton School");
+.SH SEE ALSO
+printf(1)
+.SH REPORTING BUGS
+Pre-release still not working with length moddifiers.
+.PP
+Report printf bugs to 1514@holbertonschool.com or
+1620@holbertonschool.com
+.SH AUTHORS
+Written by Cristian Castiblanco and John Garcia.
+.SH COPYRIGHT
+Copyright © 2020 Holberton School. This is free software: you are free to change and redistribute it.
